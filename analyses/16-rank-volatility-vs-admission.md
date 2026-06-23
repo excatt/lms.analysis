@@ -1,37 +1,35 @@
 # 16. 순위 변동성(저변동) ↔ 입시결과
 
 > **명제** · 순위가 꾸준한(저변동) 학생이 급등락 학생보다 입시결과가 좋다
-> **카테고리** B · 빌보드 순위 동역학 · **상태** 🔶 예비(지표 한계) · **데이터** 🟦 부분 · **출처** 시트2-17
+> **카테고리** B · 빌보드 순위 동역학 · **상태** ✅ 완료 · **데이터** 🟦 확보 · **출처** 시트2-17
 
 ## 한 줄 결론
+> **✗ 기각 — 순위 안정성은 입시를 가르지 못한다.** 졸업생의 1년 월별 순위 변동성(rank std)이 메디컬 907 vs 기타 920(Cohen d=−0.025), 평균 순위도 d=+0.06으로 차이 없음. **단 [32 성적 안정성](32-score-stability-vs-admission.md)은 d=−1.08로 강력** — 즉 "안정성이 성과를 가른다"는 *순위*가 아니라 *성적*에서만 성립한다.
 
-> **🔶 직접 검증 어려움.** 졸업생 트랙엔 일별 순위 시계열이 없고, `behavior_stats`의 랭킹 진입 횟수(focus_rank_count·study_rank_count)만 있다. 이 진입 횟수는 메디컬 8.6 vs 기타 7.3으로 차이가 미미(d≈0.06). 순위 "변동성" 자체는 일별 rank 시계열(졸업생 보존분)이 있어야 한다.
+> **트랙 안내**: 졸업생(2026 입시)의 1년 월별 STUDY_TIME 순위(`rank_month`, 2025.06~2026.06) + `admission_results`. 3개월+ 4,878명(메디컬 324).
 
-> **트랙 안내**: 입시결과(`admission_results`, 2026 입시)는 **작년 졸업생** 데이터다. 현재 30일 재원생(DocumentDB)이 아닌, `exam_management` 내부의 **작년 행동(`student_behavior_stats`)·성적(`student_records`)** 과 결합해 분석했다. 표본: 입시결과 보유 7,290명(메디컬 523), 행동결합 99%.
-
-## 결과 (근사)
-
-| 지표 | 메디컬 | 기타 | d |
+## 결과
+| 지표 | 메디컬 | 기타 | Cohen d |
 |------|:---:|:---:|:---:|
-| 몰입랭킹 진입 횟수 | 8.6 | 7.3 | +0.06 |
-| 학습랭킹 진입 횟수 | 3.5 | 3.7 | −0.02 |
+| 월별 순위 변동성(std) | 907 | 920 | −0.025 |
+| 평균 순위 | 5,515 | 5,402 | +0.060 |
 
-→ 랭킹 진입 빈도는 변별력 없음. "변동성"은 진입 횟수로 측정 불가.
+→ 순위 변동성·평균 모두 입시 변별력 없음. 입시는 순위가 아니라 성적이 결정([39](39-composite-index-vs-admission.md)).
 
-## 다음 단계
-졸업생의 작년 일별 rank 시계열(DocumentDB 보존분 또는 raw 동기화) 확보 시 순위 표준편차로 본 검증.
+## ⚠️ 교란요인 · 주의
+월평균 순위라 일별 급등락은 평활됨 — 일별 rank로 보면 변동성이 다를 수 있으나, 졸업생 일별 1년치는 미추출.
 
 ## 선행 · 연관 분석
-- [15 유지기간↔변동](15-billboard-retention-vs-focus-var.md), [32 성적 안정성](32-score-stability-vs-admission.md)
+- [32 성적 안정성](32-score-stability-vs-admission.md), [39 복합예측](39-composite-index-vs-admission.md), [15 유지↔변동](15-billboard-retention-vs-focus-var.md)
 
 ## 📊 데이터 출처 & 표본
 
 | 항목 | 내용 |
 |------|------|
-| 출처 | exam_management(PostgreSQL, intra-tools RDS) `student_behavior_stats`+`admission_results` |
-| 기간/범위 | 작년 졸업생 |
-| 표본 | 입시결과 7,533명(행동결합) |
-| 분석 방법 | 랭킹진입 횟수 근사(변동성 지표 부재) |
+| 출처 | 운영 DocumentDB(aggregation): `rank`(STUDY_TIME/NATIONWIDE/DAY) + `student_daily_report` 월별집계 + exam_management(PostgreSQL, intra-tools RDS) `admission_results` |
+| 기간/범위 | 졸업생 1년 월별 |
+| 표본 | 3개월+ 4,878명(메디컬 324) |
+| 분석 방법 | 월별 순위 std ↔ 메디컬 Cohen d |
 | 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
 | 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
 
