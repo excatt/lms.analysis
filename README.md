@@ -7,7 +7,7 @@
 
 | ✅ 완료 | 🔶 예비(장기데이터 보강) | 🟢 분석가능 | 🟡 데이터확인필요 | ⛔ 데이터부재(불가) | 합계 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| 10 | 6 | 0 | 24 | 1 | 41 |
+| 16 | 8 | 0 | 16 | 1 | 41 |
 
 - **🟢 분석가능**: 운영 DB에서 데이터가 확인되어 바로 착수 가능
 - **🟡 데이터확인필요**: 성적·입시결과·Q&A·CA·멘토 등 소스 컬렉션 확인 후 가능
@@ -44,11 +44,11 @@
 | 13 | 빌보드 100위내 평균 재원기간 | 🟦 확보 | ✅ 완료 | [13](analyses/13-top100-tenure.md) |
 | 14 | 입소→빌보드 첫 진입 소요기간 | 🟦 확보 | 🔶 예비(장기데이터 보강) | [14](analyses/14-time-to-first-billboard.md) |
 | 15 | 빌보드 유지기간 ↔ 몰입 변동폭 | 🟦 확보 | 🔶 예비(장기데이터 보강) | [15](analyses/15-billboard-retention-vs-focus-var.md) |
-| 16 | 순위 변동성(저변동) ↔ 입시결과 | 🟨 확인필요 | 🟡 데이터확인필요 | [16](analyses/16-rank-volatility-vs-admission.md) |
-| 17 | 빌보드 진입시점(고3 초/후반) ↔ 입시결과 | 🟨 확인필요 | 🟡 데이터확인필요 | [17](analyses/17-entry-timing-vs-admission.md) |
+| 16 | 순위 변동성(저변동) ↔ 입시결과 | 🟨 확인필요 | 🔶 예비(장기데이터 보강) | [16](analyses/16-rank-volatility-vs-admission.md) |
+| 17 | 빌보드 진입시점(고3 초/후반) ↔ 입시결과 | 🟨 확인필요 | 🔶 예비(장기데이터 보강) | [17](analyses/17-entry-timing-vs-admission.md) |
 | 18 | 빌보드 진입 직전 행동 변화 | 🟨 확인필요 | 🟡 데이터확인필요 | [18](analyses/18-pre-entry-behavior-change.md) |
-| 19 | 순위권 메디컬 입시결과 ↔ 재원기간 | 🟨 확인필요 | 🟡 데이터확인필요 | [19](analyses/19-toptier-medical-tenure.md) |
-| 20 | 순위권 메디컬 입시결과 ↔ 몰입시간 | 🟨 확인필요 | 🟡 데이터확인필요 | [20](analyses/20-toptier-medical-focus.md) |
+| 19 | 순위권 메디컬 입시결과 ↔ 재원기간 | 🟨 확인필요 | ✅ 완료 | [19](analyses/19-toptier-medical-tenure.md) |
+| 20 | 순위권 메디컬 입시결과 ↔ 몰입시간 | 🟨 확인필요 | ✅ 완료 | [20](analyses/20-toptier-medical-focus.md) |
 
 ## C. 서비스 활용 (Q&A·CA·공용공간)
 
@@ -70,19 +70,19 @@
 |---|------|--------|------|------|
 | 30 | 모의고사 응시횟수 ↔ 성적상승 (재원통제) | 🟨 확인필요 | 🟡 데이터확인필요 | [30](analyses/30-mock-exam-count-vs-score.md) |
 | 31 | 오답복습·피드백 연계 ↔ 성적상승 | 🟨 확인필요 | 🟡 데이터확인필요 | [31](analyses/31-mock-review-vs-score.md) |
-| 32 | 모의고사 성적 안정성 ↔ 입시결과 | 🟨 확인필요 | 🟡 데이터확인필요 | [32](analyses/32-score-stability-vs-admission.md) |
-| 33 | 초기성적 vs 상승기울기 예측력 | 🟨 확인필요 | 🟡 데이터확인필요 | [33](analyses/33-slope-vs-baseline-prediction.md) |
+| 32 | 모의고사 성적 안정성 ↔ 입시결과 | 🟨 확인필요 | ✅ 완료 | [32](analyses/32-score-stability-vs-admission.md) |
+| 33 | 초기성적 vs 상승기울기 예측력 | 🟨 확인필요 | ✅ 완료 | [33](analyses/33-slope-vs-baseline-prediction.md) |
 
 ## E. 생활·습관·복합
 
 | # | 명제 | 데이터 | 상태 | 문서 |
 |---|------|--------|------|------|
-| 34 | 조기 입소(고2~고3초) ↔ 입시결과 | 🟨 확인필요 | 🟡 데이터확인필요 | [34](analyses/34-early-enrollment-vs-admission.md) |
+| 34 | 조기 입소(고2~고3초) ↔ 입시결과 | 🟨 확인필요 | ✅ 완료 | [34](analyses/34-early-enrollment-vs-admission.md) |
 | 35 | 출결 규칙성 ↔ 빌보드 순위 | 🟦 확보 | ✅ 완료 | [35](analyses/35-attendance-regularity-vs-rank.md) |
 | 36 | 휴식 패턴 규칙성 ↔ 순공 효율 | 🟨 확인필요 | 🟡 데이터확인필요 | [36](analyses/36-rest-pattern-vs-efficiency.md) |
 | 37 | 좌석·지점 환경 ↔ 성과 | 🟦 확보 | ✅ 완료 | [37](analyses/37-seat-center-vs-performance.md) |
 | 38 | 멘토 배정 ↔ 성과 | 🟨 확인필요 | 🟡 데이터확인필요 | [38](analyses/38-mentor-assignment-vs-performance.md) |
-| 39 | 복합지표 ↔ 입시결과 예측 | 🟨 확인필요 | 🟡 데이터확인필요 | [39](analyses/39-composite-index-vs-admission.md) |
+| 39 | 복합지표 ↔ 입시결과 예측 | 🟨 확인필요 | ✅ 완료 | [39](analyses/39-composite-index-vs-admission.md) |
 | 40 | 행동 동시변화 시점 ↔ 성취 | 🟨 확인필요 | 🟡 데이터확인필요 | [40](analyses/40-simultaneous-behavior-shift-vs-achievement.md) |
 | 41 | 이탈·중도퇴소 예측 | 🟦 확보 | ✅ 완료 | [41](analyses/41-dropout-prediction.md) |
 

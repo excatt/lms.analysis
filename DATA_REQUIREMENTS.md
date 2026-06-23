@@ -6,13 +6,21 @@
 
 ## ✅ 해결된 소스 (업데이트)
 
+**`exam_management` (PostgreSQL, intra-tools RDS) 발견으로 성적·입시·응시 대거 해소.** 연결키 `students.student_id = stu_id`, `signature_id`로 시험 연결.
+
 | 소스 | 위치 | 결과 |
 |------|------|------|
-| **온라인 Q&A** | `mentoring_questions` (main DB, stu_id 집계) | ✅ 21 완료, 23·27 일부 성적 대기 |
-| **CA (멘토 상담)** | `mentor_schedule_reservation` (main DB) | ✅ 24·29 순위로 대체분석, 성적 대기 |
-| **CA 멘토 출신 식별** | admin↔student 링크 부재 | ⛔ **25 분석 불가**로 확정 |
+| **모의고사 성적** | `exam_management.student_records` (PG) | ✅ 32·33 입시트랙 완료. 성적상승(현재 재원생) 트랙 분석 대기 |
+| **입시결과(메디컬)** | `exam_management.admission_results` (group=메디컬 523) | ✅ 19·20·34·39 완료, 16·17 시계열 대기 |
+| **모의고사 응시** | `exam_management.exam_registrations` | ✅ 확보 (30·31 분석 대기) |
+| **행동 집계** | `exam_management.student_behavior_stats` | ✅ 보너스(작년 행동 피처) |
+| **온라인 Q&A** | `mentoring_questions` (main DB) | ✅ 21 완료, 22·23·27 성적결합 대기 |
+| **CA (멘토 상담)** | `mentor_schedule_reservation` (main DB) | ✅ 24·29 순위대체, 성적결합 대기 |
+| **CA 멘토 출신 식별** | admin↔student 링크 부재 | ⛔ **25 분석 불가** |
 
-→ **남은 핵심 소스: 성적 · 입시결과 · 모의고사 응시** (아래 1·3·5). 성적이 여전히 최대 병목.
+> ⚠️ **입시결과는 작년 졸업생** 데이터 → 현재 재원생(DocumentDB)이 아닌 exam_management 내부 작년 행동/성적과 결합(별도 트랙).
+
+→ **남은 작업**: ① 성적상승 트랙(현재 재원생 행동 ↔ 성적, 06·07·22·24·30 등) 분석 ② 출결 raw(03·36, 내부조사) ③ 졸업생 일별 rank 시계열(16·17).
 
 ---
 
