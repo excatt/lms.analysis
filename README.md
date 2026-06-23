@@ -1,5 +1,7 @@
 # 잇올 학습데이터 분석 — 명제 백로그
 
+> 📌 origin.xlsx 41개 외에 AI가 추가 도출한 **제안 명제 10개(P42~P51)**: [proposed/README.md](proposed/README.md) — P48 과목균형↔메디컬(d−0.86) 등.
+
 `origin.xlsx`의 가설들을 **검증 가능한 명제 41개**로 통합 정리한 마스터 인덱스.
 각 명제는 `analyses/NN-*.md` 개별 문서로 관리한다.
 
