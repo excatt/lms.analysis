@@ -7,7 +7,7 @@
 
 | ✅ 완료 | 🔶 예비(장기데이터 보강) | 🟢 분석가능 | 🟡 데이터확인필요 | ⛔ 데이터부재(불가) | 합계 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| 33 | 6 | 0 | 0 | 2 | 41 |
+| 35 | 4 | 0 | 0 | 2 | 41 |
 
 - **🟢 분석가능**: 운영 DB에서 데이터가 확인되어 바로 착수 가능
 - **🟡 데이터확인필요**: 성적·입시결과·Q&A·CA·멘토 등 소스 컬렉션 확인 후 가능
@@ -27,7 +27,7 @@
 | 01 | 몰입시간 절대량 ↔ 빌보드 순위 | 🟦 확보 | ✅ 완료 | [01](analyses/01-focus-absolute-vs-billboard-rank.md) |
 | 02 | 몰입시간 일관성(저변동) ↔ 순위 | 🟦 확보 | ✅ 완료 | [02](analyses/02-focus-consistency-vs-rank.md) |
 | 03 | 연속 몰입 블록 길이 ↔ 순위 | 🟨 확인필요 | ✅ 완료 | [03](analyses/03-continuous-focus-block-vs-rank.md) |
-| 04 | 빌보드 이탈 선행 몰입 하락 (조기경보) | 🟦 확보 | 🔶 예비(장기데이터 보강) | [04](analyses/04-focus-leading-drop-early-warning.md) |
+| 04 | 빌보드 이탈 선행 몰입 하락 (조기경보) | 🟦 확보 | ✅ 완료 | [04](analyses/04-focus-leading-drop-early-warning.md) |
 | 05 | 전월 몰입 → 익월 빌보드 (시차효과) | 🟦 확보 | ✅ 완료 | [05](analyses/05-focus-lag-next-month-rank.md) |
 | 06 | 주말·공휴일 몰입 ↔ 성적상승 | 🟨 확인필요 | ✅ 완료 | [06](analyses/06-weekend-holiday-focus-vs-score.md) |
 | 07 | 입실시각(오전형) ↔ 성적상승 | 🟨 확인필요 | ✅ 완료 | [07](analyses/07-morning-checkin-vs-score.md) |
@@ -60,7 +60,7 @@
 | 24 | CA 활용빈도 ↔ 성적상승 | 🟨 확인필요 | ✅ 완료 | [24](analyses/24-ca-frequency-vs-score.md) |
 | 25 | CA 멘토 출신 ↔ 평균 몰입시간 | 🟨 확인필요 | ⛔ 데이터부재(불가) | [25](analyses/25-ca-mentor-focus.md) |
 | 26 | 공용공간 신청 ↔ 빌보드 순위 | 🟦 확보 | ✅ 완료 | [26](analyses/26-public-seat-vs-rank.md) |
-| 27 | Q&A 시간대(수업직후 vs 심야) ↔ 성적 | 🟨 확인필요 | 🔶 예비(장기데이터 보강) | [27](analyses/27-qna-timing-vs-score.md) |
+| 27 | Q&A 시간대(수업직후 vs 심야) ↔ 성적 | 🟨 확인필요 | ✅ 완료 | [27](analyses/27-qna-timing-vs-score.md) |
 | 28 | CA·Q&A 동시활용 ↔ 성적 | 🟨 확인필요 | ✅ 완료 | [28](analyses/28-ca-qna-combined-vs-score.md) |
 | 29 | 입소 초기 서비스활용 ↔ 이후 성취 | 🟨 확인필요 | 🔶 예비(장기데이터 보강) | [29](analyses/29-early-service-usage-vs-achievement.md) |
 
