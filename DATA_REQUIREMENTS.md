@@ -1,26 +1,28 @@
-# 데이터 요청 목록 (🟡 데이터 잠금 해제용)
+# 데이터 요청 목록 (모두 해결됨 — 기록 보존용)
 
-41개 명제 중 다수가 외부 데이터 소스에 막혀 있습니다. 출결 raw 2개는 제가 itall-be 코드에서 직접 확인하겠습니다.
+> ✅ **2026-06-23 최종: 41개 명제 중 39개 분석 완료, 2개만 데이터부재로 불가.** 처음 막혀 있던 소스(성적·입시결과·Q&A·CA·출결 raw)가 모두 확보·처리됐다. 이 문서는 어떤 소스가 어디서 풀렸는지의 기록으로 보존한다. 결과는 [README](README.md), 몰입시간 정의/보정은 [DATA_QUALITY](DATA_QUALITY_focus_time.md) 참고.
 
-> **요청**: 각 소스가 **① 운영 DB에 있는지(컬렉션명) ② 외부 시스템(api.itall.com·별도 LMS·엑셀)인지 ③ 아예 수집 안 되는지** 알려주시면, 확인되는 즉시 해당 명제들을 착수합니다.
+## ✅ 해결된 소스 (전부 확보)
 
-## ✅ 해결된 소스 (업데이트)
+**`exam_management` (PostgreSQL, intra-tools RDS) 발견으로 성적·입시·응시 해소.** 연결키 `students.student_id = stu_id`, `signature_id`로 시험 연결.
 
-**`exam_management` (PostgreSQL, intra-tools RDS) 발견으로 성적·입시·응시 대거 해소.** 연결키 `students.student_id = stu_id`, `signature_id`로 시험 연결.
-
-| 소스 | 위치 | 결과 |
+| 소스 | 위치 | 처리 결과 |
 |------|------|------|
-| **모의고사 성적** | `exam_management.student_records` (PG) | ✅ 32·33 입시트랙 완료. 성적상승(현재 재원생) 트랙 분석 대기 |
-| **입시결과(메디컬)** | `exam_management.admission_results` (group=메디컬 523) | ✅ 19·20·34·39 완료, 16·17 시계열 대기 |
-| **모의고사 응시** | `exam_management.exam_registrations` | ✅ 확보 (30·31 분석 대기) |
-| **행동 집계** | `exam_management.student_behavior_stats` | ✅ 보너스(작년 행동 피처) |
-| **온라인 Q&A** | `mentoring_questions` (main DB) | ✅ 21 완료, 22·23·27 성적결합 대기 |
-| **CA (멘토 상담)** | `mentor_schedule_reservation` (main DB) | ✅ 24·29 순위대체, 성적결합 대기 |
-| **CA 멘토 출신 식별** | admin↔student 링크 부재 | ⛔ **25 분석 불가** |
+| **모의고사 성적** | `exam_management.student_records` (PG) | ✅ 입시트랙(32·33)·성적상승트랙(06·07·08·22·24·30) 완료 |
+| **입시결과(메디컬)** | `exam_management.admission_results` (group=메디컬) | ✅ 19·20·34·39·16·17 완료 |
+| **모의고사 응시** | `exam_management.exam_registrations` | ✅ 30·31 처리(31은 복습로그 부재로 불가) |
+| **행동 집계** | `exam_management.student_behavior_stats` | ✅ 입시트랙 보너스 피처 |
+| **온라인 Q&A** | `mentoring_questions` (main DB, created_at 날짜별) | ✅ 21·22·23·27·29·18·40 |
+| **CA (멘토 상담)** | `mentor_schedule_reservation` (main DB, date별) | ✅ 24·28·29·38 |
+| **출결 raw (외출/블록)** | `attendance.outing_log` (main DB) | ✅ 03·36, 등원인정 보정(patrol) |
+| **장기 시계열** | DocumentDB 1년 월별(rank/sdr) | ✅ 04·05·11·12·14·15 |
+| CA 멘토 출신 식별 | admin↔student 링크 부재 | ⛔ **25 불가** |
+| 오답복습·피드백 로그 | 기록 테이블 없음 | ⛔ **31 불가** |
 
-> ⚠️ **입시결과는 작년 졸업생** 데이터 → 현재 재원생(DocumentDB)이 아닌 exam_management 내부 작년 행동/성적과 결합(별도 트랙).
+> ⚠️ **입시결과는 작년 졸업생** 데이터 → exam_management 내부 작년 행동/성적과 결합(별도 트랙).
+> ⚠️ **몰입시간(focus_time)은 등원인정 교시를 못 빼 일부 부풀려짐** — patrol 보정으로 재검증 시 핵심 결론 견고([DATA_QUALITY](DATA_QUALITY_focus_time.md)).
 
-→ **남은 작업**: ① 성적상승 트랙(현재 재원생 행동 ↔ 성적, 06·07·22·24·30 등) 분석 ② 출결 raw(03·36, 내부조사) ③ 졸업생 일별 rank 시계열(16·17).
+→ **남은 것: 없음.** 불가 2개(25·31)는 데이터 자체가 부재.
 
 ---
 
