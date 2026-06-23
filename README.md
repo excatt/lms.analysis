@@ -7,7 +7,7 @@
 
 | ✅ 완료 | 🔶 예비(장기데이터 보강) | 🟢 분석가능 | 🟡 데이터확인필요 | ⛔ 데이터부재(불가) | 합계 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| 25 | 14 | 0 | 0 | 2 | 41 |
+| 28 | 11 | 0 | 0 | 2 | 41 |
 
 - **🟢 분석가능**: 운영 DB에서 데이터가 확인되어 바로 착수 가능
 - **🟡 데이터확인필요**: 성적·입시결과·Q&A·CA·멘토 등 소스 컬렉션 확인 후 가능
@@ -28,14 +28,14 @@
 | 02 | 몰입시간 일관성(저변동) ↔ 순위 | 🟦 확보 | ✅ 완료 | [02](analyses/02-focus-consistency-vs-rank.md) |
 | 03 | 연속 몰입 블록 길이 ↔ 순위 | 🟨 확인필요 | 🔶 예비(장기데이터 보강) | [03](analyses/03-continuous-focus-block-vs-rank.md) |
 | 04 | 빌보드 이탈 선행 몰입 하락 (조기경보) | 🟦 확보 | 🔶 예비(장기데이터 보강) | [04](analyses/04-focus-leading-drop-early-warning.md) |
-| 05 | 전월 몰입 → 익월 빌보드 (시차효과) | 🟦 확보 | 🔶 예비(장기데이터 보강) | [05](analyses/05-focus-lag-next-month-rank.md) |
+| 05 | 전월 몰입 → 익월 빌보드 (시차효과) | 🟦 확보 | ✅ 완료 | [05](analyses/05-focus-lag-next-month-rank.md) |
 | 06 | 주말·공휴일 몰입 ↔ 성적상승 | 🟨 확인필요 | ✅ 완료 | [06](analyses/06-weekend-holiday-focus-vs-score.md) |
 | 07 | 입실시각(오전형) ↔ 성적상승 | 🟨 확인필요 | ✅ 완료 | [07](analyses/07-morning-checkin-vs-score.md) |
 | 08 | 외출·조퇴 빈도 ↔ 순위·성적 | 🟨 확인필요 | ✅ 완료 | [08](analyses/08-outing-frequency-vs-rank-score.md) |
 | 09 | 요일별 몰입 편차 ↔ 상위권 | 🟦 확보 | ✅ 완료 | [09](analyses/09-weekday-variance-toptier.md) |
 | 10 | 재원 N개월차 몰입 정점 후 분기 | 🟦 확보 | ✅ 완료 | [10](analyses/10-tenure-focus-peak.md) |
-| 11 | 수능 N개월 전 몰입 급증 시점 | 🟨 확인필요 | 🔶 예비(장기데이터 보강) | [11](analyses/11-focus-surge-before-exam.md) |
-| 12 | 방학 몰입 증가폭 ↔ 성적상승 | 🟨 확인필요 | 🔶 예비(장기데이터 보강) | [12](analyses/12-vacation-focus-growth-vs-score.md) |
+| 11 | 수능 N개월 전 몰입 급증 시점 | 🟨 확인필요 | ✅ 완료 | [11](analyses/11-focus-surge-before-exam.md) |
+| 12 | 방학 몰입 증가폭 ↔ 성적상승 | 🟨 확인필요 | ✅ 완료 | [12](analyses/12-vacation-focus-growth-vs-score.md) |
 
 ## B. 빌보드 순위 동역학
 
