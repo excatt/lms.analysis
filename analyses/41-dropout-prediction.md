@@ -41,7 +41,14 @@
 
 ## 📊 데이터 출처 & 표본
 
-아직 미분석. 필요 데이터는 위 **필요 데이터** 절 참고. 성적·입시결과는 `exam_management`(PG), 출결 raw는 itall-be `attendance` 조사 예정.
+| 항목 | 내용 |
+|------|------|
+| 출처 | 운영 DocumentDB(aggregation): `rank`(STUDY_TIME/NATIONWIDE/DAY) + `student_daily_report` + main `student.stu_status`/`enrollment_history` |
+| 기간/범위 | 30일 + 재원상태 |
+| 표본 | WITHDRAWN 1,593 vs CURRENT 13,412 (윈도우 내 이탈 1,791) |
+| 분석 방법 | 재원/퇴원 횡단 비교 |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
 
 ---
 ◀ [전체 명제 목록](../README.md)
