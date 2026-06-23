@@ -88,7 +88,8 @@
 
 ## 데이터 출처 메모
 
-> 🟡 막힌 28개의 데이터 요청 상세(소스별 확인 질문·명제 매트릭스)는 **[DATA_REQUIREMENTS.md](DATA_REQUIREMENTS.md)** 참고.
+> ⚠️ **몰입시간(focus_time) 정의·등원인정 허수 보정**은 **[DATA_QUALITY_focus_time.md](DATA_QUALITY_focus_time.md)** 참고 (focus_time은 등원인정 교시를 못 빼 일부 부풀려짐, 평균 6%·헤비유저 −1.69h, 핵심 결론은 견고).
+> 🟡 데이터 요청 상세(소스별 확인 질문·명제 매트릭스)는 **[DATA_REQUIREMENTS.md](DATA_REQUIREMENTS.md)** 참고.
 
 | 지표 | 컬렉션/소스 | 상태 |
 |------|-------------|------|
