@@ -5,9 +5,9 @@
 
 ## 진행 현황
 
-| ✅ 완료 | 🔶 예비(장기데이터 보강) | 🟢 분석가능 | 🟡 데이터확인필요 | 합계 |
-|:---:|:---:|:---:|:---:|:---:|
-| 9 | 4 | 0 | 28 | 41 |
+| ✅ 완료 | 🔶 예비(장기데이터 보강) | 🟢 분석가능 | 🟡 데이터확인필요 | ⛔ 데이터부재(불가) | 합계 |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 10 | 6 | 0 | 24 | 1 | 41 |
 
 - **🟢 분석가능**: 운영 DB에서 데이터가 확인되어 바로 착수 가능
 - **🟡 데이터확인필요**: 성적·입시결과·Q&A·CA·멘토 등 소스 컬렉션 확인 후 가능
@@ -54,15 +54,15 @@
 
 | # | 명제 | 데이터 | 상태 | 문서 |
 |---|------|--------|------|------|
-| 21 | 빌보드 순위권 ↔ 온라인 Q&A 활용도 | 🟨 확인필요 | 🟡 데이터확인필요 | [21](analyses/21-rank-vs-online-qna.md) |
+| 21 | 빌보드 순위권 ↔ 온라인 Q&A 활용도 | 🟨 확인필요 | ✅ 완료 | [21](analyses/21-rank-vs-online-qna.md) |
 | 22 | Q&A ↔ 성적상승 (재원기간 통제) | 🟨 확인필요 | 🟡 데이터확인필요 | [22](analyses/22-qna-vs-score-tenure-controlled.md) |
 | 23 | Q&A 재질문·후속활용 ↔ 성적상승 | 🟨 확인필요 | 🟡 데이터확인필요 | [23](analyses/23-qna-followup-vs-score.md) |
-| 24 | CA 활용빈도 ↔ 성적상승 | 🟨 확인필요 | 🟡 데이터확인필요 | [24](analyses/24-ca-frequency-vs-score.md) |
-| 25 | CA 멘토 출신 ↔ 평균 몰입시간 | 🟨 확인필요 | 🟡 데이터확인필요 | [25](analyses/25-ca-mentor-focus.md) |
+| 24 | CA 활용빈도 ↔ 성적상승 | 🟨 확인필요 | 🔶 예비(장기데이터 보강) | [24](analyses/24-ca-frequency-vs-score.md) |
+| 25 | CA 멘토 출신 ↔ 평균 몰입시간 | 🟨 확인필요 | ⛔ 데이터부재(불가) | [25](analyses/25-ca-mentor-focus.md) |
 | 26 | 공용공간 신청 ↔ 빌보드 순위 | 🟦 확보 | ✅ 완료 | [26](analyses/26-public-seat-vs-rank.md) |
 | 27 | Q&A 시간대(수업직후 vs 심야) ↔ 성적 | 🟨 확인필요 | 🟡 데이터확인필요 | [27](analyses/27-qna-timing-vs-score.md) |
 | 28 | CA·Q&A 동시활용 ↔ 성적 | 🟨 확인필요 | 🟡 데이터확인필요 | [28](analyses/28-ca-qna-combined-vs-score.md) |
-| 29 | 입소 초기 서비스활용 ↔ 이후 성취 | 🟨 확인필요 | 🟡 데이터확인필요 | [29](analyses/29-early-service-usage-vs-achievement.md) |
+| 29 | 입소 초기 서비스활용 ↔ 이후 성취 | 🟨 확인필요 | 🔶 예비(장기데이터 보강) | [29](analyses/29-early-service-usage-vs-achievement.md) |
 
 ## D. 모의고사·성적·입시
 
@@ -97,10 +97,11 @@
 | 출결·외출·입퇴실 | 출결 raw (main DB) | 확보(일부 raw 스키마 확인) |
 | 공용공간 신청 | `public_seat` / ticket 계열 | 확보 |
 | 재원기간·좌석·센터 | `student` / `admission` / `seat` | 확보 |
+| 온라인 Q&A | `mentoring_questions` (main DB, stu_id 집계) | ✅ 확인됨 |
+| CA(멘토 상담) | `mentor_schedule_reservation` (main DB) | ✅ 확인됨 |
 | 성적·모의고사 | ? | **확인 필요** |
 | 입시결과(메디컬) | ? | **확인 필요** |
-| 온라인 Q&A | api.itall.com 가능성 | **확인 필요** |
-| CA·멘토 | 멘토링 계열 | **확인 필요** |
+| CA 멘토 출신 식별 | admin↔student 링크 부재 | ⛔ 불가 |
 
 ## 재현 환경
 
