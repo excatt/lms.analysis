@@ -5,9 +5,9 @@
 
 ## 진행 현황
 
-| ✅ 완료 | 🟢 분석가능 | 🟡 데이터확인필요 | 합계 |
-|:---:|:---:|:---:|:---:|
-| 1 | 12 | 28 | 41 |
+| ✅ 완료 | 🔶 예비(장기데이터 보강) | 🟢 분석가능 | 🟡 데이터확인필요 | 합계 |
+|:---:|:---:|:---:|:---:|:---:|
+| 5 | 2 | 6 | 28 | 41 |
 
 - **🟢 분석가능**: 운영 DB에서 데이터가 확인되어 바로 착수 가능
 - **🟡 데이터확인필요**: 성적·입시결과·Q&A·CA·멘토 등 소스 컬렉션 확인 후 가능
@@ -25,14 +25,14 @@
 | # | 명제 | 데이터 | 상태 | 문서 |
 |---|------|--------|------|------|
 | 01 | 몰입시간 절대량 ↔ 빌보드 순위 | 🟦 확보 | ✅ 완료 | [01](analyses/01-focus-absolute-vs-billboard-rank.md) |
-| 02 | 몰입시간 일관성(저변동) ↔ 순위 | 🟦 확보 | 🟢 분석가능 | [02](analyses/02-focus-consistency-vs-rank.md) |
+| 02 | 몰입시간 일관성(저변동) ↔ 순위 | 🟦 확보 | ✅ 완료 | [02](analyses/02-focus-consistency-vs-rank.md) |
 | 03 | 연속 몰입 블록 길이 ↔ 순위 | 🟨 확인필요 | 🟡 데이터확인필요 | [03](analyses/03-continuous-focus-block-vs-rank.md) |
-| 04 | 빌보드 이탈 선행 몰입 하락 (조기경보) | 🟦 확보 | 🟢 분석가능 | [04](analyses/04-focus-leading-drop-early-warning.md) |
+| 04 | 빌보드 이탈 선행 몰입 하락 (조기경보) | 🟦 확보 | 🔶 예비(장기데이터 보강) | [04](analyses/04-focus-leading-drop-early-warning.md) |
 | 05 | 전월 몰입 → 익월 빌보드 (시차효과) | 🟦 확보 | 🟢 분석가능 | [05](analyses/05-focus-lag-next-month-rank.md) |
 | 06 | 주말·공휴일 몰입 ↔ 성적상승 | 🟨 확인필요 | 🟡 데이터확인필요 | [06](analyses/06-weekend-holiday-focus-vs-score.md) |
 | 07 | 입실시각(오전형) ↔ 성적상승 | 🟨 확인필요 | 🟡 데이터확인필요 | [07](analyses/07-morning-checkin-vs-score.md) |
 | 08 | 외출·조퇴 빈도 ↔ 순위·성적 | 🟨 확인필요 | 🟡 데이터확인필요 | [08](analyses/08-outing-frequency-vs-rank-score.md) |
-| 09 | 요일별 몰입 편차 ↔ 상위권 | 🟦 확보 | 🟢 분석가능 | [09](analyses/09-weekday-variance-toptier.md) |
+| 09 | 요일별 몰입 편차 ↔ 상위권 | 🟦 확보 | ✅ 완료 | [09](analyses/09-weekday-variance-toptier.md) |
 | 10 | 재원 N개월차 몰입 정점 후 분기 | 🟦 확보 | 🟢 분석가능 | [10](analyses/10-tenure-focus-peak.md) |
 | 11 | 수능 N개월 전 몰입 급증 시점 | 🟨 확인필요 | 🟡 데이터확인필요 | [11](analyses/11-focus-surge-before-exam.md) |
 | 12 | 방학 몰입 증가폭 ↔ 성적상승 | 🟨 확인필요 | 🟡 데이터확인필요 | [12](analyses/12-vacation-focus-growth-vs-score.md) |
@@ -43,7 +43,7 @@
 |---|------|--------|------|------|
 | 13 | 빌보드 100위내 평균 재원기간 | 🟦 확보 | 🟢 분석가능 | [13](analyses/13-top100-tenure.md) |
 | 14 | 입소→빌보드 첫 진입 소요기간 | 🟦 확보 | 🟢 분석가능 | [14](analyses/14-time-to-first-billboard.md) |
-| 15 | 빌보드 유지기간 ↔ 몰입 변동폭 | 🟦 확보 | 🟢 분석가능 | [15](analyses/15-billboard-retention-vs-focus-var.md) |
+| 15 | 빌보드 유지기간 ↔ 몰입 변동폭 | 🟦 확보 | 🔶 예비(장기데이터 보강) | [15](analyses/15-billboard-retention-vs-focus-var.md) |
 | 16 | 순위 변동성(저변동) ↔ 입시결과 | 🟨 확인필요 | 🟡 데이터확인필요 | [16](analyses/16-rank-volatility-vs-admission.md) |
 | 17 | 빌보드 진입시점(고3 초/후반) ↔ 입시결과 | 🟨 확인필요 | 🟡 데이터확인필요 | [17](analyses/17-entry-timing-vs-admission.md) |
 | 18 | 빌보드 진입 직전 행동 변화 | 🟨 확인필요 | 🟡 데이터확인필요 | [18](analyses/18-pre-entry-behavior-change.md) |
@@ -78,9 +78,9 @@
 | # | 명제 | 데이터 | 상태 | 문서 |
 |---|------|--------|------|------|
 | 34 | 조기 입소(고2~고3초) ↔ 입시결과 | 🟨 확인필요 | 🟡 데이터확인필요 | [34](analyses/34-early-enrollment-vs-admission.md) |
-| 35 | 출결 규칙성 ↔ 빌보드 순위 | 🟦 확보 | 🟢 분석가능 | [35](analyses/35-attendance-regularity-vs-rank.md) |
+| 35 | 출결 규칙성 ↔ 빌보드 순위 | 🟦 확보 | ✅ 완료 | [35](analyses/35-attendance-regularity-vs-rank.md) |
 | 36 | 휴식 패턴 규칙성 ↔ 순공 효율 | 🟨 확인필요 | 🟡 데이터확인필요 | [36](analyses/36-rest-pattern-vs-efficiency.md) |
-| 37 | 좌석·지점 환경 ↔ 성과 | 🟦 확보 | 🟢 분석가능 | [37](analyses/37-seat-center-vs-performance.md) |
+| 37 | 좌석·지점 환경 ↔ 성과 | 🟦 확보 | ✅ 완료 | [37](analyses/37-seat-center-vs-performance.md) |
 | 38 | 멘토 배정 ↔ 성과 | 🟨 확인필요 | 🟡 데이터확인필요 | [38](analyses/38-mentor-assignment-vs-performance.md) |
 | 39 | 복합지표 ↔ 입시결과 예측 | 🟨 확인필요 | 🟡 데이터확인필요 | [39](analyses/39-composite-index-vs-admission.md) |
 | 40 | 행동 동시변화 시점 ↔ 성취 | 🟨 확인필요 | 🟡 데이터확인필요 | [40](analyses/40-simultaneous-behavior-shift-vs-achievement.md) |
