@@ -14,6 +14,30 @@
 - **🟢 분석가능**: 운영 DB에서 데이터가 확인되어 바로 착수 가능
 - **🟡 데이터확인필요**: 성적·입시결과·Q&A·CA·멘토 등 소스 컬렉션 확인 후 가능
 
+## 📊 핵심 시각 요약 — 세 장의 그림으로 보는 결론
+
+51개 명제를 관통하는 세 가지 발견. 개별 분석의 상세는 각 문서를 참고.
+
+### ① 입시(메디컬)는 행동이 아니라 **성적**이 가른다
+
+![medical discrimination](assets/_meta/meta_medical_discrimination.png)
+
+몰입시간·재원기간·출결·지각·주말노력 등 **모든 행동지표**의 메디컬 변별력은 |Cohen d|<0.15(무효). 반면 성적의 **절대수준(d+1.33)·안정성(d−1.08)·과목균형(d−0.86)** 은 압도적으로 크다. → "다들 비슷하게 열심히 하고, 변별은 실력(성적)에서 난다." 행동만으로 메디컬 예측 시 ROC-AUC 0.52(무작위), 성적을 더하면 0.88([39](analyses/39-composite-index-vs-admission.md)).
+
+### ② 행동 ↔ 성적상승은 **전부 무효** (|ρ|<0.1)
+
+![score slope partials](assets/_meta/meta_score_slope_partials.png)
+
+주말몰입·입실시각·외출·Q&A·CA·응시횟수·효율 — **어떤 행동도 성적상승 기울기를 가르지 못한다**(전부 노란 무효 구간). 단 [28](analyses/28-ca-qna-combined-vs-score.md)에서 '서비스를 전혀 안 쓰는 소수'만 성적이 정체(이진 효과는 존재).
+
+### ③ 순위를 움직이는 건 몰입'량'이 아니라 **꾸준함·공간활용**
+
+![rank partials](assets/_meta/meta_rank_partials.png)
+
+빌보드(STUDY_TIME)는 학습시간으로 매겨져 몰입'량'의 고유효과는 ≈0(동어반복, [01](analyses/01-focus-absolute-vs-billboard-rank.md)). 학습시간을 통제했을 때 순위를 끌어올리는 건 **일관성([02](analyses/02-focus-consistency-vs-rank.md) +0.42)·퇴실시각([P42](proposed/P42-checkout-time-vs-rank.md) 0.44)·연속등원([P43](proposed/P43-consecutive-attendance-vs-rank.md) 0.42)·공용공간 활용([26](analyses/26-public-seat-vs-rank.md) 0.53)** 같은 *지속성/적극성* 지표다.
+
+> **한 문장 결론**: 변별은 '**얼마나 많이**'가 아니라 '**얼마나 꾸준·균형적이냐**', 그리고 궁극적으로 **성적**이다.
+
 ## 설계 원칙 (1번 분석의 교훈)
 
 > **1번**에서 STUDY_TIME 빌보드는 학습시간으로 매겨져 몰입시간과 **동어반복**에 가깝다는 점이 드러났다

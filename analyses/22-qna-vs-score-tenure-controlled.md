@@ -15,6 +15,11 @@
 
 > **메타 결론(중요)**: 모든 행동/서비스의 성적상승 부분상관이 |ρ|<0.08로 매우 작다. **입시결과 트랙(행동 AUC 0.52)·순위 트랙(몰입 동어반복)과 동일** — 잇올 행동지표는 성과(순위·성적상승·입시) 변별력이 일관되게 약하다. 변별은 '양'이 아니라 [02 일관성](02-focus-consistency-vs-rank.md)·[32 성적안정성](32-score-stability-vs-admission.md) 같은 '안정성'에서 난다.
 
+
+![qna score](../assets/22/chart_qna_score.png)
+
+*Q&A 활용의 성적상승 부분상관 +0.051 — 21번 'Q&A↔순위'와 같은 약한 적극성 신호가 성적에서도 재현(무효 구간).*
+
 ## 선행 · 연관 분석
 - [21 Q&A↔순위](21-rank-vs-online-qna.md), [28 CA·Q&A 동시활용](28-ca-qna-combined-vs-score.md)
 

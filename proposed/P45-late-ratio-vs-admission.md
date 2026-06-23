@@ -14,6 +14,15 @@
 | Cohen d | −0.131 |
 
 
+
+![late ratio](../assets/proposed/P45/chart.png)
+
+*메디컬 지각률 0.112 vs 기타 0.127(d=−0.131) — 약하게 적으나 효과 작음. 19번 '성실성 미세 신호'와 일치.*
+
+## 연관
+
+지각률은 [19 메디컬↔재원](../analyses/19-toptier-medical-tenure.md)의 '성실성 미세 신호(d−0.13)'와 같은 값이다. 다른 행동 변별력은 [39 복합예측](../analyses/39-composite-index-vs-admission.md) · [P46 주말등원](P46-weekend-ratio-vs-admission.md) 참고.
+
 ## 📊 데이터 출처 & 표본
 
 | 항목 | 내용 |

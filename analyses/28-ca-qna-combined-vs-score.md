@@ -19,6 +19,11 @@
 
 > **메타 결론(중요)**: 모든 행동/서비스의 성적상승 부분상관이 |ρ|<0.08로 매우 작다. **입시결과 트랙(행동 AUC 0.52)·순위 트랙(몰입 동어반복)과 동일** — 잇올 행동지표는 성과(순위·성적상승·입시) 변별력이 일관되게 약하다. 변별은 '양'이 아니라 [02 일관성](02-focus-consistency-vs-rank.md)·[32 성적안정성](32-score-stability-vs-admission.md) 같은 '안정성'에서 난다.
 
+
+![combined](../assets/28/chart_combined.png)
+
+*둘 다(+2.78)>한쪽(+2.27)>**안 씀(−0.43)**. '최소 하나라도 활용'의 이진 효과는 뚜렷하나, 그 위로 빈도 변별력은 약함.*
+
 ## 선행 · 연관 분석
 - [22 Q&A↔성적](22-qna-vs-score-tenure-controlled.md), [24 CA↔성적](24-ca-frequency-vs-score.md), [29 복합 서비스활용](29-early-service-usage-vs-achievement.md)
 

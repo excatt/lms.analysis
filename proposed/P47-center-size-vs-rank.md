@@ -10,6 +10,15 @@
 부분상관 −0.017 / 큰센터 49.0% vs 작은센터 51.4%
 
 
+
+![center size](../assets/proposed/P47/chart.png)
+
+*센터 규모↔개인 순위(몰입 통제) −0.017. 큰 센터가 미세하게 상위(49.0 vs 51.4%)지만 효과 거의 없음 — 37번과 정합.*
+
+## 연관
+
+센터 효과의 작음(η²=4.6%)은 [37 센터↔성과](../analyses/37-seat-center-vs-performance.md)와 정합. 개인차가 환경을 압도한다는 [01](../analyses/01-focus-absolute-vs-billboard-rank.md)의 결론과 같은 방향.
+
 ## 📊 데이터 출처 & 표본
 
 | 항목 | 내용 |

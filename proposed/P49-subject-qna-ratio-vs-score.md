@@ -10,6 +10,15 @@
 부분상관 +0.021 (n=594), 교과Q&A 비중 평균 99%
 
 
+
+![subject qna](../assets/proposed/P49/chart.png)
+
+*Q&A의 99%가 교과(SUBJECT)라 입시 Q&A가 드물어 변별 불가 — 교과비중↔성적상승 +0.021(n.s.).*
+
+## 연관
+
+Q&A 구조 자체는 [21 Q&A↔순위](../analyses/21-rank-vs-online-qna.md) · [27 Q&A 시간대](../analyses/27-qna-timing-vs-score.md) · [22 Q&A↔성적](../analyses/22-qna-vs-score-tenure-controlled.md) 참고. 입시(ADMISSION) 유형 Q&A가 1%에 그쳐 유형 분석의 표본이 부족하다.
+
 ## 📊 데이터 출처 & 표본
 
 | 항목 | 내용 |

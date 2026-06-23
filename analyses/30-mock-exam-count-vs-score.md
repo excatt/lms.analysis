@@ -18,6 +18,11 @@
 
 > **메타 결론(중요)**: 모든 행동/서비스의 성적상승 부분상관이 |ρ|<0.08로 매우 작다. **입시결과 트랙(행동 AUC 0.52)·순위 트랙(몰입 동어반복)과 동일** — 잇올 행동지표는 성과(순위·성적상승·입시) 변별력이 일관되게 약하다. 변별은 '양'이 아니라 [02 일관성](02-focus-consistency-vs-rank.md)·[32 성적안정성](32-score-stability-vs-admission.md) 같은 '안정성'에서 난다.
 
+
+![mock count](../assets/30/chart_mock_count.png)
+
+*응시횟수의 성적상승 부분상관 −0.053 — 유의하나 명제와 반대 방향이고 효과 미미. 많이 본다고 더 오르지 않는다.*
+
 ## 선행 · 연관 분석
 - [32 성적 안정성](32-score-stability-vs-admission.md), [33 상승기울기](33-slope-vs-baseline-prediction.md)
 

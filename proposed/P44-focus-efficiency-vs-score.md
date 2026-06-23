@@ -16,6 +16,15 @@
 비효율 학습(study는 높은데 focus 낮음)이 성적을 못 올리는지. 결과: 효율 자체가 거의 1이라 변별 불가([03] 외출 희소와 정합).
 
 
+
+![efficiency](../assets/proposed/P44/chart.png)
+
+*몰입효율(focus/study)이 99%로 수렴해 변별력이 없다 — 전체 −0.016, 효율<1 학생만 봐도 −0.001(무효).*
+
+## 연관
+
+효율이 99%로 수렴하는 근본 원인(외출·공용공간 희소)은 [03 연속 블록](../analyses/03-continuous-focus-block-vs-rank.md)·[36 휴식 패턴](../analyses/36-rest-pattern-vs-efficiency.md)에서 확인된다. 반례 프로파일은 [P51 비효율 학습자](P51-inefficient-learner-profile.md) 참고.
+
 ## 📊 데이터 출처 & 표본
 
 | 항목 | 내용 |

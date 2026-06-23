@@ -17,6 +17,11 @@
 
 → 셋 다 미미. 빌보드 진입은 직전 일주일의 행동 변화로 설명되지 않는다.
 
+
+![pre-entry](../assets/18/chart_preentry.png)
+
+*진입 직전 1주일 Q&A·CA·몰입 변화가 모두 미미 — 빌보드 진입은 단기 급증이 아니라 누적의 결과.*
+
 ## ⚠️ 교란요인 · 주의
 30일 윈도우 + 7일 lookback이라 장기 누적 추세는 못 봄. 단 [05](05-focus-lag-next-month-rank.md)(전월→익월 −0.697)·[01](01-focus-absolute-vs-billboard-rank.md)에서 누적 몰입이 순위를 결정함이 확인됨 → "누적의 결과" 해석과 정합.
 

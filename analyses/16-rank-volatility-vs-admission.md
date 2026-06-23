@@ -16,6 +16,11 @@
 
 → 순위 변동성·평균 모두 입시 변별력 없음. 입시는 순위가 아니라 성적이 결정([39](39-composite-index-vs-admission.md)).
 
+
+![rank volatility](../assets/16/chart_volatility.png)
+
+*순위 변동성·평균 모두 메디컬과 기타가 동일(d=−0.025, +0.06) — '안정성이 성과를 가른다'는 *순위*가 아니라 [32 성적](32-score-stability-vs-admission.md)에서만 성립.*
+
 ## ⚠️ 교란요인 · 주의
 월평균 순위라 일별 급등락은 평활됨 — 일별 rank로 보면 변동성이 다를 수 있으나, 졸업생 일별 1년치는 미추출.
 

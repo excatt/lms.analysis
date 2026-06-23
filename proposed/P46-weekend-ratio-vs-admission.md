@@ -10,6 +10,15 @@
 메디컬 0.180 vs 기타 0.183 (d=−0.070)
 
 
+
+![weekend ratio](../assets/proposed/P46/chart.png)
+
+*메디컬 주말등원율 0.180 vs 기타 0.183(d=−0.070) — 차이 거의 없음. 주말 노력도 입시를 가르지 못한다.*
+
+## 연관
+
+주말 노력의 무효는 [12 방학 몰입](../analyses/12-vacation-focus-growth-vs-score.md)('방학 몰아치기' 무효)과 같은 결. 지각률은 [P45](P45-late-ratio-vs-admission.md), 종합 변별력은 [39](../analyses/39-composite-index-vs-admission.md).
+
 ## 📊 데이터 출처 & 표본
 
 | 항목 | 내용 |
