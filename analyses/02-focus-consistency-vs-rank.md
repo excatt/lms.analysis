@@ -42,6 +42,8 @@
 ## ⚠️ 교란요인 · 주의
 평균과 분산은 음의 상관 경향(많이 하는 학생이 더 꾸준) → 평균 통제 필수. 통제 후에도 +0.42가 남아 고유효과 확인됨. CV는 평균 0 학생에서 정의 불가라 제외.
 
+> ⚠️ **STUDY 빌보드 한정**: 이 +0.42는 **STUDY_TIME 순위 outcome 한정**이다. **FOCUS_TIME 순위**로 재검증하면 일관성의 부분상관은 ≈0(−0.07)으로 **소멸**한다. 즉 일관성의 순위 이득은 `study_time` 경로로 실현되며, 몰입 자체의 안정성이 순위를 가르는 건 아니다. 견고한 순위 동인은 연속등원([P43](../proposed/P43-consecutive-attendance-vs-rank.md))뿐. 상세: [방법론 노트](../METHODOLOGY_billboard_choice.md).
+
 ## 선행 · 연관 분석
 - [01 몰입 절대량 ↔ 순위](01-focus-absolute-vs-billboard-rank.md) (출발점)
 - 연관: [09](09-weekday-variance-toptier.md), [15](15-billboard-retention-vs-focus-var.md), [35](35-attendance-regularity-vs-rank.md)

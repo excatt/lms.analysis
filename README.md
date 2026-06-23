@@ -36,7 +36,9 @@
 
 ![rank partials](assets/_meta/meta_rank_partials.png)
 
-빌보드(STUDY_TIME)는 학습시간으로 매겨져 몰입'량'의 고유효과는 ≈0(동어반복, [01](analyses/01-focus-absolute-vs-billboard-rank.md)). 학습시간을 통제했을 때 순위를 끌어올리는 건 **일관성([02](analyses/02-focus-consistency-vs-rank.md) +0.42)·퇴실시각([P42](proposed/P42-checkout-time-vs-rank.md) 0.44)·연속등원([P43](proposed/P43-consecutive-attendance-vs-rank.md) 0.42)·공용공간 활용([26](analyses/26-public-seat-vs-rank.md) 0.53)** 같은 *지속성/적극성* 지표다.
+빌보드(STUDY_TIME)는 학습시간으로 매겨져 몰입'량'의 고유효과는 ≈0(동어반복, [01](analyses/01-focus-absolute-vs-billboard-rank.md)). 학습시간을 통제했을 때 순위를 끌어올리는 건 **일관성([02](analyses/02-focus-consistency-vs-rank.md))·퇴실시각([P42](proposed/P42-checkout-time-vs-rank.md))·연속등원([P43](proposed/P43-consecutive-attendance-vs-rank.md))·공용공간 활용([26](analyses/26-public-seat-vs-rank.md))** 같은 *지속성/적극성* 지표다.
+
+> ⚠️ **재한정(중요)**: 이 효과들을 **FOCUS_TIME 빌보드**로 재검증하면, 견고한 건 **연속등원(P43, FOCUS선도 +0.25)뿐**이다. 02 일관성·26 공용공간·P42 퇴실은 FOCUS 순위에선 소멸/반전한다 — 공용·상담 시간이 `study_time`엔 포함되나 `focus`엔 차감돼, STUDY_TIME 순위가 그 행동을 *기계적으로* 보상하기 때문(공용+상담 갭 ↔ STUDY +0.69 / FOCUS −0.30). 상세: **[방법론 노트](METHODOLOGY_billboard_choice.md)**.
 
 > **한 문장 결론**: 변별은 '**얼마나 많이**'가 아니라 '**얼마나 꾸준·균형적이냐**', 그리고 궁극적으로 **성적**이다.
 
@@ -117,6 +119,7 @@
 ## 데이터 출처 메모
 
 > ⚠️ **몰입시간(focus_time) 정의·등원인정 허수 보정**은 **[DATA_QUALITY_focus_time.md](DATA_QUALITY_focus_time.md)** 참고 (focus_time은 등원인정 교시를 못 빼 일부 부풀려짐, 평균 6%·헤비유저 −1.69h, 핵심 결론은 견고).
+> ⚠️ **순위 outcome 선택(STUDY_TIME vs FOCUS_TIME)·구성 artifact**는 **[METHODOLOGY_billboard_choice.md](METHODOLOGY_billboard_choice.md)** 참고 (FOCUS 순위는 동어반복이라 STUDY_TIME 유지가 맞으나, 02·26·P42의 순위 독립효과는 공용·상담 구성효과 의존 — 견고한 건 연속등원뿐).
 > 🟡 데이터 요청 상세(소스별 확인 질문·명제 매트릭스)는 **[DATA_REQUIREMENTS.md](DATA_REQUIREMENTS.md)** 참고.
 
 | 지표 | 컬렉션/소스 | 상태 |
