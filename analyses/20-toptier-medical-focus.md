@@ -26,5 +26,16 @@
 ## 선행 · 연관 분석
 - [19 메디컬↔재원](19-toptier-medical-tenure.md), [39 복합예측](39-composite-index-vs-admission.md), [01 몰입↔순위](01-focus-absolute-vs-billboard-rank.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | exam_management(PostgreSQL, intra-tools RDS) |
+| 기간/범위 | 작년 졸업생 |
+| 표본 | 메디컬 523 vs 기타 6,767 |
+| 분석 방법 | Mann-Whitney + Cohen d |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

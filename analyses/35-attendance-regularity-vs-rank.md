@@ -44,5 +44,16 @@
 ## 선행 · 연관 분석
 - [02 몰입 일관성](02-focus-consistency-vs-rank.md), [09 요일편차](09-weekday-variance-toptier.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | 운영 DocumentDB(aggregation): `rank`(STUDY_TIME/NATIONWIDE/DAY) + `student_daily_report` |
+| 기간/범위 | 30일 |
+| 표본 | checkin>0 ≥10일 학생 |
+| 분석 방법 | 입실시각 std, 몰입 통제 부분상관 |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

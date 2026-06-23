@@ -36,5 +36,16 @@
 ## 선행 · 연관 분석
 - [14 빌보드 진입 소요기간](14-time-to-first-billboard.md), [10 재원 정점](10-tenure-focus-peak.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | 운영 DocumentDB(aggregation): `rank`(STUDY_TIME/NATIONWIDE/DAY) + `student_daily_report` + main `enrollment_history` |
+| 기간/범위 | 30일 + 입소이력 |
+| 표본 | Top-100 경험 840명 / 전체 15,033 |
+| 분석 방법 | 재원기간 분포 비교 |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

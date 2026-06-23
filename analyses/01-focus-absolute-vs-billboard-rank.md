@@ -119,5 +119,16 @@ _(없음 — 전체 분석의 출발점)_ → 직접 파생: [02](02-focus-consi
 - 추출: 운영 aggregation DB read-only (`find`만). 대상: `rank`(STUDY_TIME/NATIONWIDE/DAY), `student_daily_report`.
 - 분석: Python pandas/scipy. 차트: `../assets/01/`.
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | 운영 DocumentDB(aggregation): `rank`(STUDY_TIME/NATIONWIDE/DAY) + `student_daily_report` |
+| 기간/범위 | 2026.05.24~06.22 (30일, 일별) |
+| 표본 | 390,722 학생-일 · 고유 15,036명 |
+| 분석 방법 | (stu_id,date) 조인, study_time 통제 부분상관 |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

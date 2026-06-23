@@ -39,5 +39,16 @@
 ## 선행 · 연관 분석
 - [01 몰입 절대량](01-focus-absolute-vs-billboard-rank.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | 운영 DocumentDB(aggregation): `rank`(STUDY_TIME/NATIONWIDE/DAY) + `student_daily_report` |
+| 기간/범위 | 30일 |
+| 표본 | Top-1000 이탈 이벤트 12,155건 |
+| 분석 방법 | 이벤트 전후 3일 focus 변화 t-test (예비) |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

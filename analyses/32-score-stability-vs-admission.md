@@ -25,5 +25,16 @@
 ## 선행 · 연관 분석
 - [33 상승기울기](33-slope-vs-baseline-prediction.md), [39 복합예측](39-composite-index-vs-admission.md), [02 몰입 일관성](02-focus-consistency-vs-rank.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | exam_management(PostgreSQL, intra-tools RDS) `student_records`+`admission_results` |
+| 기간/범위 | 작년 졸업생 성적 시계열 |
+| 표본 | 성적 3회+ 3,270명 |
+| 분석 방법 | 백분위 std/평균, Cohen d |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

@@ -18,5 +18,16 @@
 ## 선행 · 연관 분석
 - [14 진입 소요기간](14-time-to-first-billboard.md), [16 순위 변동성](16-rank-volatility-vs-admission.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | exam_management(PostgreSQL, intra-tools RDS) |
+| 기간/범위 | 작년 졸업생 |
+| 표본 | — |
+| 분석 방법 | 보류: 진입 '시점' 시계열 부재 |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

@@ -22,5 +22,16 @@
 ## 선행 · 연관 분석
 - [19 재원기간](19-toptier-medical-tenure.md), [39 복합예측](39-composite-index-vs-admission.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | exam_management(PostgreSQL, intra-tools RDS) `admission_results`+`students` |
+| 기간/범위 | 작년 졸업생 |
+| 표본 | 입시결과 7,290명(메디컬 523) |
+| 분석 방법 | 입소월/학년 분포 비교 |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

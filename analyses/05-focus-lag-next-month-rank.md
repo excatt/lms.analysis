@@ -31,5 +31,16 @@
 ## 선행 · 연관 분석
 - [01 몰입 절대량](01-focus-absolute-vs-billboard-rank.md), [04 선행하락](04-focus-leading-drop-early-warning.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | 운영 DocumentDB(aggregation): `rank`(STUDY_TIME/NATIONWIDE/DAY) + `student_daily_report` (days=MONTH) |
+| 기간/범위 | — |
+| 표본 | 보류 |
+| 분석 방법 | rank days=MONTH 인덱스 미스 타임아웃(OperationFailure) |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

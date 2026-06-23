@@ -37,5 +37,16 @@
 ## 선행 · 연관 분석
 - [13 재원기간](13-top100-tenure.md), [05 시차효과](05-focus-lag-next-month-rank.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | 운영 DocumentDB(aggregation): `rank`(STUDY_TIME/NATIONWIDE/DAY) + `student_daily_report` + main `enrollment_history` |
+| 기간/범위 | 30일 + 입소이력 |
+| 표본 | 재원기간 보유 학생 7개 구간 |
+| 분석 방법 | cross-section 재원개월×몰입 |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

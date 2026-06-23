@@ -38,5 +38,16 @@
 ## 선행 · 연관 분석
 - [01 몰입 절대량](01-focus-absolute-vs-billboard-rank.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | main `attendance_ticket`(공용공간) + 운영 DocumentDB(aggregation): `rank`(STUDY_TIME/NATIONWIDE/DAY) + `student_daily_report` |
+| 기간/범위 | 신청 누적 + 순위 30일 |
+| 표본 | 공용공간 신청 13,875명 |
+| 분석 방법 | 월당 정규화, 몰입 통제 부분상관 |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

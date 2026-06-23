@@ -40,5 +40,16 @@
 ## 선행 · 연관 분석
 - [24 CA 멘토상담 활용](24-ca-frequency-vs-score.md), [29 복합 서비스활용](29-early-service-usage-vs-achievement.md), [26 공용공간](26-public-seat-vs-rank.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | main `mentoring_questions` + 운영 DocumentDB(aggregation): `rank`(STUDY_TIME/NATIONWIDE/DAY) + `student_daily_report` |
+| 기간/범위 | Q&A 누적 + 순위 30일 |
+| 표본 | Q&A 사용 3,249명 / 분석 14,417명 |
+| 분석 방법 | 월당 정규화, 몰입 통제 부분상관 |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

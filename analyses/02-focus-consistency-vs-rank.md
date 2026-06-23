@@ -46,5 +46,16 @@
 - [01 몰입 절대량 ↔ 순위](01-focus-absolute-vs-billboard-rank.md) (출발점)
 - 연관: [09](09-weekday-variance-toptier.md), [15](15-billboard-retention-vs-focus-var.md), [35](35-attendance-regularity-vs-rank.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | 운영 DocumentDB(aggregation): `rank`(STUDY_TIME/NATIONWIDE/DAY) + `student_daily_report` |
+| 기간/범위 | 30일 |
+| 표본 | ≥10일 출현 13,768명 |
+| 분석 방법 | 학생별 focus CV, 평균 통제 부분상관 |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

@@ -39,5 +39,9 @@
 ## 선행 · 연관 분석
 - [04 선행 몰입 하락](04-focus-leading-drop-early-warning.md) (시계열 보강)
 
+## 📊 데이터 출처 & 표본
+
+아직 미분석. 필요 데이터는 위 **필요 데이터** 절 참고. 성적·입시결과는 `exam_management`(PG), 출결 raw는 itall-be `attendance` 조사 예정.
+
 ---
 ◀ [전체 명제 목록](../README.md)

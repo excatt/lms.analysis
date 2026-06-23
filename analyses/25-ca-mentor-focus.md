@@ -25,5 +25,16 @@ CA 멘토 출신 학생의 재원기 평균 몰입시간은 O시간이다.
 ## 선행 · 연관 분석
 - [24 CA 활용](24-ca-frequency-vs-score.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | (조사) `mentor`/`admin` ↔ `student` |
+| 기간/범위 | — |
+| 표본 | 불가 |
+| 분석 방법 | admin↔student 공식 링크 부재로 멘토출신 식별 불가 |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

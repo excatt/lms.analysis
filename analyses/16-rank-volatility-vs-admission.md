@@ -24,5 +24,16 @@
 ## 선행 · 연관 분석
 - [15 유지기간↔변동](15-billboard-retention-vs-focus-var.md), [32 성적 안정성](32-score-stability-vs-admission.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | exam_management(PostgreSQL, intra-tools RDS) `student_behavior_stats`+`admission_results` |
+| 기간/범위 | 작년 졸업생 |
+| 표본 | 입시결과 7,533명(행동결합) |
+| 분석 방법 | 랭킹진입 횟수 근사(변동성 지표 부재) |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

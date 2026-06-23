@@ -36,5 +36,16 @@
 ## 선행 · 연관 분석
 - [21 Q&A](21-rank-vs-online-qna.md), [24 CA](24-ca-frequency-vs-score.md), [28 CA·Q&A](28-ca-qna-combined-vs-score.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | main `mentoring_questions`+`mentor_schedule_reservation` + 운영 DocumentDB(aggregation): `rank`(STUDY_TIME/NATIONWIDE/DAY) + `student_daily_report` |
+| 기간/범위 | 서비스 누적 + 순위 30일 |
+| 표본 | 분석 14,417명 (둘다 3,192/없음 1,174) |
+| 분석 방법 | 복합 서비스활용 부분상관 |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)

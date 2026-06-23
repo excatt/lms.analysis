@@ -27,5 +27,16 @@
 ## 선행 · 연관 분석
 - [20 메디컬↔몰입](20-toptier-medical-focus.md), [32 성적안정성↔입시](32-score-stability-vs-admission.md), [33 상승기울기](33-slope-vs-baseline-prediction.md)
 
+## 📊 데이터 출처 & 표본
+
+| 항목 | 내용 |
+|------|------|
+| 출처 | exam_management(PostgreSQL, intra-tools RDS) 행동+성적 + 운영 DocumentDB(aggregation): `rank`(STUDY_TIME/NATIONWIDE/DAY) + `student_daily_report` |
+| 기간/범위 | 작년 졸업생 |
+| 표본 | 로지스틱 4,422명(메디컬 306) |
+| 분석 방법 | 5-fold CV ROC-AUC, StandardScaler+LogReg |
+| 추출 | 운영 DB **read-only** (MongoDB `find` / PostgreSQL `SELECT`, 쓰기 호출 없음) |
+| 환경 | 격리 venv(uv, pandas/scipy/sklearn), 자격증명 비저장 |
+
 ---
 ◀ [전체 명제 목록](../README.md)
