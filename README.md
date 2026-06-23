@@ -88,6 +88,8 @@
 
 ## 데이터 출처 메모
 
+> 🟡 막힌 28개의 데이터 요청 상세(소스별 확인 질문·명제 매트릭스)는 **[DATA_REQUIREMENTS.md](DATA_REQUIREMENTS.md)** 참고.
+
 | 지표 | 컬렉션/소스 | 상태 |
 |------|-------------|------|
 | 몰입시간 focus_time | `student_daily_report` (aggregation DB) | 확보 |
