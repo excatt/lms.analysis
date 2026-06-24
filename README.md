@@ -11,12 +11,13 @@
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | 39 | 0 | 0 | 0 | 2 | 41 |
 
-- **🟢 분석가능**: 운영 DB에서 데이터가 확인되어 바로 착수 가능
-- **🟡 데이터확인필요**: 성적·입시결과·Q&A·CA·멘토 등 소스 컬렉션 확인 후 가능
+- **⛔ 불가 2**: 25(멘토 출신 식별 링크 부재)·31(오답복습 로그 부재) — 데이터 자체가 없음.
+- **📈 시각화**: 분석 가능한 **49/51 문서에 차트 완비**(불가 25·31 제외) + 메타 차트 4종. 각 차트는 문서 검증 수치를 그대로 시각화.
+- **➕ 제안 명제 11개(P42~P52)**: origin 41개 외 AI 도출 → [proposed/](proposed/README.md).
 
-## 📊 핵심 시각 요약 — 세 장의 그림으로 보는 결론
+## 📊 핵심 시각 요약 — 네 장의 그림으로 보는 결론
 
-51개 명제를 관통하는 세 가지 발견. 개별 분석의 상세는 각 문서를 참고.
+52개 명제(origin 41 + 제안 11)를 관통하는 **핵심 발견 셋(①~③)** 과 **방법론 경고 하나(④)**. 개별 분석의 상세는 각 문서를 참고.
 
 ### ① 입시(메디컬)는 행동이 아니라 **성적**이 가른다
 
@@ -36,9 +37,13 @@
 
 ![rank partials](assets/_meta/meta_rank_partials.png)
 
-빌보드(STUDY_TIME)는 학습시간으로 매겨져 몰입'량'의 고유효과는 ≈0(동어반복, [01](analyses/01-focus-absolute-vs-billboard-rank.md)). 학습시간을 통제했을 때 순위를 끌어올리는 건 **일관성([02](analyses/02-focus-consistency-vs-rank.md))·퇴실시각([P42](proposed/P42-checkout-time-vs-rank.md))·연속등원([P43](proposed/P43-consecutive-attendance-vs-rank.md))·공용공간 활용([26](analyses/26-public-seat-vs-rank.md))** 같은 *지속성/적극성* 지표다.
+빌보드(STUDY_TIME)는 학습시간으로 매겨져 몰입'량'의 고유효과는 ≈0(동어반복, [01](analyses/01-focus-absolute-vs-billboard-rank.md)). 학습시간을 통제했을 때 순위를 끌어올리는 건 **일관성([02](analyses/02-focus-consistency-vs-rank.md))·퇴실시각([P42](proposed/P42-checkout-time-vs-rank.md))·연속등원([P43](proposed/P43-consecutive-attendance-vs-rank.md))·공용공간 활용([26](analyses/26-public-seat-vs-rank.md))** 같은 *지속성/적극성* 지표다. — **단 이들 중 상당수는 빌보드 *종류*에 의존한다(④ 참고).**
 
-> ⚠️ **재한정(중요)**: 이 효과들을 **FOCUS_TIME 빌보드**로 재검증하면, 견고한 건 **연속등원(P43, FOCUS선도 +0.25)뿐**이다. 02 일관성·26 공용공간·P42 퇴실은 FOCUS 순위에선 소멸/반전한다 — 공용·상담 시간이 `study_time`엔 포함되나 `focus`엔 차감돼, STUDY_TIME 순위가 그 행동을 *기계적으로* 보상하기 때문(공용+상담 갭 ↔ STUDY +0.69 / FOCUS −0.30). 상세: **[방법론 노트](METHODOLOGY_billboard_choice.md)**.
+### ④ ⚠️ '순위 독립효과'의 함정 — STUDY vs FOCUS 빌보드
+
+![study vs focus rank](assets/_meta/meta_study_vs_focus_rank.png)
+
+③의 순위 독립효과를 **FOCUS_TIME 빌보드**로 재검증하면 대부분 무너진다: **02 일관성(+0.40→−0.07 소멸)·26 공용공간(+0.53→−0.15 반전)·P42 퇴실(+0.46→+0.12 약화)**, 견고한 건 **연속등원(P43, +0.42→+0.25)뿐**. 원인은 `study_time = 체류−외출`, `focus = 체류−외출−공용−상담` — **공용·상담 시간이 study_time엔 포함·focus엔 차감**돼, STUDY_TIME 순위가 그 행동을 *기계적으로* 보상하기 때문(공용+상담 갭 ↔ STUDY +0.69 / FOCUS −0.30). FOCUS 순위로 "바꾸는" 건 동어반복(focus|study통제 +0.95)이라 불가 → **STUDY_TIME 유지가 맞되, 순위 독립효과는 '연속등원(꾸준함)'으로 좁혀 해석**해야 한다. 상세: **[방법론 노트](METHODOLOGY_billboard_choice.md)**. (메타①②는 성적 기반이라 무영향.)
 
 > **한 문장 결론**: 변별은 '**얼마나 많이**'가 아니라 '**얼마나 꾸준·균형적이냐**', 그리고 궁극적으로 **성적**이다.
 
